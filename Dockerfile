@@ -2,13 +2,13 @@
 FROM node:12.2.0-alpine
 
 # set working directory
-WORKDIR /app/api
+WORKDIR /app/congressional-members-search-api
 
 # add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/api/node_modules/.bin:$PATH
+ENV PATH /app/congressional-members-search-api/node_modules/.bin:$PATH
 
 # install and cache app dependencies
-COPY package.json /app/api/package.json
+COPY package.json /app/congressional-members-search-api/package.json
 RUN npm install 
 
 
